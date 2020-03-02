@@ -9,24 +9,27 @@ public class HRStrategyApproval implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Competition Title")
+	@org.kie.api.definition.type.Label("Competition Title")
 	private java.lang.String competitionTitle;
-	@org.kie.api.definition.type.Label(value = "Post Information")
+	@org.kie.api.definition.type.Label("Post Information")
 	private com.myspace.stage1.PostInfo postInfo;
-	@org.kie.api.definition.type.Label(value = "Competition Type")
+	@org.kie.api.definition.type.Label("Competition Type")
 	private java.lang.String competitionType;
-	@org.kie.api.definition.type.Label(value = "Approval")
+	@org.kie.api.definition.type.Label("Approval")
 	private com.myspace.stage1.Approval approval;
-	@org.kie.api.definition.type.Label(value = "Immediate Vacancies")
+	@org.kie.api.definition.type.Label("Immediate Vacancies")
 	private java.lang.Integer immediateVacancies;
-	@org.kie.api.definition.type.Label(value = "Estimated Vacancies")
+	@org.kie.api.definition.type.Label("Estimated Vacancies")
 	private java.lang.Integer estimatedVacancies;
-	@org.kie.api.definition.type.Label(value = "Location of Posts")
+	@org.kie.api.definition.type.Label("Location of Posts")
 	private java.lang.String location;
-	@org.kie.api.definition.type.Label(value = "Internal Mobility")
+	@org.kie.api.definition.type.Label("Internal Mobility")
 	private boolean internalMobility;
-	@org.kie.api.definition.type.Label(value = "Other Relevant Information")
+	@org.kie.api.definition.type.Label("Other Relevant Information")
 	private java.lang.String other;
+
+	@org.kie.api.definition.type.Label(value = "Approval Granted")
+	private java.lang.String approvalGranted;
 
 	public HRStrategyApproval() {
 	}
@@ -103,13 +106,22 @@ public class HRStrategyApproval implements java.io.Serializable {
 		this.other = other;
 	}
 
+	public java.lang.String getApprovalGranted() {
+		return this.approvalGranted;
+	}
+
+	public void setApprovalGranted(java.lang.String approvalGranted) {
+		this.approvalGranted = approvalGranted;
+	}
+
 	public HRStrategyApproval(java.lang.String competitionTitle,
 			com.myspace.stage1.PostInfo postInfo,
 			java.lang.String competitionType,
 			com.myspace.stage1.Approval approval,
 			java.lang.Integer immediateVacancies,
 			java.lang.Integer estimatedVacancies, java.lang.String location,
-			boolean internalMobility, java.lang.String other) {
+			boolean internalMobility, java.lang.String other,
+			java.lang.String approvalGranted) {
 		this.competitionTitle = competitionTitle;
 		this.postInfo = postInfo;
 		this.competitionType = competitionType;
@@ -119,6 +131,7 @@ public class HRStrategyApproval implements java.io.Serializable {
 		this.location = location;
 		this.internalMobility = internalMobility;
 		this.other = other;
+		this.approvalGranted = approvalGranted;
 	}
 
 }
