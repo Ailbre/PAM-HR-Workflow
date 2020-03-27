@@ -11,8 +11,6 @@ public class HRStrategyApproval implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("Competition Title")
 	private java.lang.String competitionTitle;
-	@org.kie.api.definition.type.Label("Post Info")
-	private com.myspace.stage1.PostInfo postInfo;
 	@org.kie.api.definition.type.Label("Competition Type")
 	private java.lang.String competitionType;
 	@org.kie.api.definition.type.Label("Approval")
@@ -25,6 +23,9 @@ public class HRStrategyApproval implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Approval Granted")
 	private java.lang.String approvalGranted;
 
+	@org.kie.api.definition.type.Label(value = "Post")
+	private com.myspace.stage1.Post post;
+
 	public HRStrategyApproval() {
 	}
 
@@ -34,14 +35,6 @@ public class HRStrategyApproval implements java.io.Serializable {
 
 	public void setCompetitionTitle(java.lang.String competitionTitle) {
 		this.competitionTitle = competitionTitle;
-	}
-
-	public com.myspace.stage1.PostInfo getPostInfo() {
-		return this.postInfo;
-	}
-
-	public void setPostInfo(com.myspace.stage1.PostInfo postInfo) {
-		this.postInfo = postInfo;
 	}
 
 	public java.lang.String getCompetitionType() {
@@ -84,18 +77,26 @@ public class HRStrategyApproval implements java.io.Serializable {
 		this.approvalGranted = approvalGranted;
 	}
 
+	public com.myspace.stage1.Post getPost() {
+		return this.post;
+	}
+
+	public void setPost(com.myspace.stage1.Post post) {
+		this.post = post;
+	}
+
 	public HRStrategyApproval(java.lang.String competitionTitle,
-			com.myspace.stage1.PostInfo postInfo,
 			java.lang.String competitionType,
 			com.myspace.stage1.Approval approval, boolean internalMobility,
-			java.lang.String other, java.lang.String approvalGranted) {
+			java.lang.String other, java.lang.String approvalGranted,
+			com.myspace.stage1.Post post) {
 		this.competitionTitle = competitionTitle;
-		this.postInfo = postInfo;
 		this.competitionType = competitionType;
 		this.approval = approval;
 		this.internalMobility = internalMobility;
 		this.other = other;
 		this.approvalGranted = approvalGranted;
+		this.post = post;
 	}
 
 }
