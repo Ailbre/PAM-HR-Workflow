@@ -9,19 +9,16 @@ public class Post implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Post Information")
+	@org.kie.api.definition.type.Label("Post Information")
 	private com.myspace.stage1.PostInfo postInfo;
-	@org.kie.api.definition.type.Label(value = "Level of Post")
+	@org.kie.api.definition.type.Label("Level of Post")
 	private java.lang.String postLevel;
-	@org.kie.api.definition.type.Label(value = "Number of Immediate Posts")
+	@org.kie.api.definition.type.Label("Number of Immediate Posts")
 	private java.lang.Integer immediatePosts;
-	@org.kie.api.definition.type.Label(value = "Number of Estimated Posts")
+	@org.kie.api.definition.type.Label("Number of Estimated Posts")
 	private java.lang.Integer estimatedPosts;
-	@org.kie.api.definition.type.Label(value = "Location of Posts")
+	@org.kie.api.definition.type.Label("Location of Posts")
 	private java.lang.String location;
-	@org.kie.api.definition.type.Label(value = "Irish Language Requirement")
-	private boolean languageRequirement;
-
 	public Post() {
 	}
 
@@ -65,24 +62,14 @@ public class Post implements java.io.Serializable {
 		this.location = location;
 	}
 
-	public boolean isLanguageRequirement() {
-		return this.languageRequirement;
-	}
-
-	public void setLanguageRequirement(boolean languageRequirement) {
-		this.languageRequirement = languageRequirement;
-	}
-
 	public Post(com.myspace.stage1.PostInfo postInfo,
 			java.lang.String postLevel, java.lang.Integer immediatePosts,
-			java.lang.Integer estimatedPosts, java.lang.String location,
-			boolean languageRequirement) {
+			java.lang.Integer estimatedPosts, java.lang.String location) {
 		this.postInfo = postInfo;
 		this.postLevel = postLevel;
 		this.immediatePosts = immediatePosts;
 		this.estimatedPosts = estimatedPosts;
 		this.location = location;
-		this.languageRequirement = languageRequirement;
 	}
 
 }
