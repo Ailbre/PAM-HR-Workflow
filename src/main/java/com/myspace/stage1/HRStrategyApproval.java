@@ -11,24 +11,18 @@ public class HRStrategyApproval implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("Competition Title")
 	private java.lang.String competitionTitle;
-	@org.kie.api.definition.type.Label("Post Information")
+	@org.kie.api.definition.type.Label("Post Info")
 	private com.myspace.stage1.PostInfo postInfo;
 	@org.kie.api.definition.type.Label("Competition Type")
 	private java.lang.String competitionType;
 	@org.kie.api.definition.type.Label("Approval")
 	private com.myspace.stage1.Approval approval;
-	@org.kie.api.definition.type.Label("Immediate Vacancies")
-	private java.lang.Integer immediateVacancies;
-	@org.kie.api.definition.type.Label("Estimated Vacancies")
-	private java.lang.Integer estimatedVacancies;
-	@org.kie.api.definition.type.Label("Location of Posts")
-	private java.lang.String location;
 	@org.kie.api.definition.type.Label("Internal Mobility")
 	private boolean internalMobility;
 	@org.kie.api.definition.type.Label("Other Relevant Information")
 	private java.lang.String other;
 
-	@org.kie.api.definition.type.Label(value = "Approval Granted")
+	@org.kie.api.definition.type.Label("Approval Granted")
 	private java.lang.String approvalGranted;
 
 	public HRStrategyApproval() {
@@ -66,30 +60,6 @@ public class HRStrategyApproval implements java.io.Serializable {
 		this.approval = approval;
 	}
 
-	public java.lang.Integer getImmediateVacancies() {
-		return this.immediateVacancies;
-	}
-
-	public void setImmediateVacancies(java.lang.Integer immediateVacancies) {
-		this.immediateVacancies = immediateVacancies;
-	}
-
-	public java.lang.Integer getEstimatedVacancies() {
-		return this.estimatedVacancies;
-	}
-
-	public void setEstimatedVacancies(java.lang.Integer estimatedVacancies) {
-		this.estimatedVacancies = estimatedVacancies;
-	}
-
-	public java.lang.String getLocation() {
-		return this.location;
-	}
-
-	public void setLocation(java.lang.String location) {
-		this.location = location;
-	}
-
 	public boolean isInternalMobility() {
 		return this.internalMobility;
 	}
@@ -117,18 +87,12 @@ public class HRStrategyApproval implements java.io.Serializable {
 	public HRStrategyApproval(java.lang.String competitionTitle,
 			com.myspace.stage1.PostInfo postInfo,
 			java.lang.String competitionType,
-			com.myspace.stage1.Approval approval,
-			java.lang.Integer immediateVacancies,
-			java.lang.Integer estimatedVacancies, java.lang.String location,
-			boolean internalMobility, java.lang.String other,
-			java.lang.String approvalGranted) {
+			com.myspace.stage1.Approval approval, boolean internalMobility,
+			java.lang.String other, java.lang.String approvalGranted) {
 		this.competitionTitle = competitionTitle;
 		this.postInfo = postInfo;
 		this.competitionType = competitionType;
 		this.approval = approval;
-		this.immediateVacancies = immediateVacancies;
-		this.estimatedVacancies = estimatedVacancies;
-		this.location = location;
 		this.internalMobility = internalMobility;
 		this.other = other;
 		this.approvalGranted = approvalGranted;
