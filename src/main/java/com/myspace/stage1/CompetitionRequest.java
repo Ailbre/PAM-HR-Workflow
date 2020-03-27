@@ -9,20 +9,23 @@ public class CompetitionRequest implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Competition Title")
+	@org.kie.api.definition.type.Label("Competition Title")
 	private java.lang.String competitionTitle;
-	@org.kie.api.definition.type.Label(value = "Requesting Division")
+	@org.kie.api.definition.type.Label("Requesting Division")
 	private java.lang.String requestingDivision;
-	@org.kie.api.definition.type.Label(value = "Post")
+	@org.kie.api.definition.type.Label("Post")
 	private com.myspace.stage1.Post post;
-	@org.kie.api.definition.type.Label(value = "Timeframe")
+	@org.kie.api.definition.type.Label("Timeframe")
 	private com.myspace.stage1.Timeframe timeframe;
-	@org.kie.api.definition.type.Label(value = "Principal Stakeholder")
+	@org.kie.api.definition.type.Label("Principal Stakeholder")
 	private java.lang.String stakeholder;
-	@org.kie.api.definition.type.Label(value = "Candidate Liason")
+	@org.kie.api.definition.type.Label("Candidate Liason")
 	private java.lang.String liason;
-	@org.kie.api.definition.type.Label(value = "Other Relevant Information")
+	@org.kie.api.definition.type.Label("Other Relevant Information")
 	private java.lang.String other;
+
+	@org.kie.api.definition.type.Label(value = "Irish Language Requirement")
+	private java.lang.Boolean languageRequirement;
 
 	public CompetitionRequest() {
 	}
@@ -83,11 +86,19 @@ public class CompetitionRequest implements java.io.Serializable {
 		this.other = other;
 	}
 
+	public java.lang.Boolean getLanguageRequirement() {
+		return this.languageRequirement;
+	}
+
+	public void setLanguageRequirement(java.lang.Boolean languageRequirement) {
+		this.languageRequirement = languageRequirement;
+	}
+
 	public CompetitionRequest(java.lang.String competitionTitle,
 			java.lang.String requestingDivision, com.myspace.stage1.Post post,
 			com.myspace.stage1.Timeframe timeframe,
 			java.lang.String stakeholder, java.lang.String liason,
-			java.lang.String other) {
+			java.lang.String other, java.lang.Boolean languageRequirement) {
 		this.competitionTitle = competitionTitle;
 		this.requestingDivision = requestingDivision;
 		this.post = post;
@@ -95,6 +106,7 @@ public class CompetitionRequest implements java.io.Serializable {
 		this.stakeholder = stakeholder;
 		this.liason = liason;
 		this.other = other;
+		this.languageRequirement = languageRequirement;
 	}
 
 }
